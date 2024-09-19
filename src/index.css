@@ -1,0 +1,118 @@
+/* Show the episodes list when the button is clicked */
+.episodes-list {
+  display: none;
+  padding: 10px;
+
+}
+
+/* Add a class to show the episodes list */
+.show-episodes {
+  display: block !important;
+}
+
+
+/* Home styling */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Move content to the left */
+  padding: 20px;
+  color: gold;
+  background-color: black;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+.search-sort-container {
+  /* Move sort buttons to the right */
+  display: flex;
+  justify-content: flex-end;
+  /* Move sort buttons to the right */
+  margin-bottom: 0px;
+  margin: auto;
+  width: 50%;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 5px double gold;
+  border-radius: 20px;
+  border-right: none;
+  border-left: none;
+}
+
+select {
+  padding: 10px;
+  border: 5px double gold;
+  border-radius: 20px;
+  border-left: none;
+  border-right: none;
+}
+
+.show-list {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.show-info {
+  display: flex;
+  margin-bottom: 20px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.show-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.show-details {
+  flex: 1;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+.favorite-container {
+  background-color: black;
+  color: aqua;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.genres-container {
+  position: relative;
+  top: -20px;
+  margin: auto;
+  width: 50%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.history-container {
+
+  margin-top: 0;
+  color: black;
+  background-image: linear-gradient(black, gold);
+  padding: 50px;
+}
+
+.history-container p {
+  color:black;
+}
+
+.navbar-container {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 50px; 
+  background-color: white; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  z-index: 1000; 
+}
