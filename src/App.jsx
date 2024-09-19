@@ -7,6 +7,7 @@ import Authentication from './components/form';
 import Favorite from './components/Favorite';
 import History from './components/History';
 
+
 function App() {
   // State variables for managing the current page, selected podcast, and favorite episodes
   const [currentPage, setCurrentPage] = useState(localStorage.getItem('currentPage') || 'home');
