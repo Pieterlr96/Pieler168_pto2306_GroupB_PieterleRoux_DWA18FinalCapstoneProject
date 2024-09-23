@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import Fade from './Carosel';
+import ErrorBoundary from './Error Boundaries';
+import { UseContextValue } from "./UseContextValues";
 
 const Home = ({ onPodcastClick, selectedPodcast }) => {
   // State variables
@@ -23,6 +26,7 @@ const Home = ({ onPodcastClick, selectedPodcast }) => {
         setLoading(false);
       });
   }, []);
+
 
    // Handle podcast click
   const handlePodcastClick = (podcast) => {
@@ -96,12 +100,17 @@ const Home = ({ onPodcastClick, selectedPodcast }) => {
   ];
 
    // Render the Home component
-  return (
+   return (
     <div className="home-container">
       <h1>
-  <img src="./Icon192x192.png" alt="Yappers Logo" width="30" height="24"/>
-  <span className="Title">Yappers</span>
-</h1>
+        <img src="./Icon192x192.png" alt="Yappers Logo" width="30" height="24" />
+        <span className="Title">Yappers</span>
+      </h1>
+
+      {/* Render the carousel with the podcast data */}
+      <ErrorBoundary>
+      {!loading && <Fade shows={showPodcast} />}
+     </ErrorBoundary>
       <div className="search-sort-container">
         <input
           type="text"
@@ -150,11 +159,12 @@ const Home = ({ onPodcastClick, selectedPodcast }) => {
   );
 };
 
- // Render the Home component
+// Prop types
 Home.propTypes = {
   onPodcastClick: PropTypes.func.isRequired,
   selectedPodcast: PropTypes.object,
 };
+
 
 export default Home;
 

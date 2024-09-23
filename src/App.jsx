@@ -6,7 +6,7 @@ import Preview from './components/Preview';
 import Authentication from './components/form';
 import Favorite from './components/Favorite';
 import History from './components/History';
-
+import Fade from './components/Carosel';
 
 function App() {
   // State variables for managing the current page, selected podcast, and favorite episodes

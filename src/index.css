@@ -116,3 +116,19 @@ select {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   z-index: 1000; 
 }
+.slider-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px 0; 
+}
+.slick-slide {
+  text-align: center; /* Center the content inside the slide */
+}
+.slick-slide img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 400px; /* Set a maximum height for the images */
+  object-fit: cover; /* Crop the image to fit the container */
+  border-radius: 10px; /* Optional: Add rounded corners to the images */
+}
+
