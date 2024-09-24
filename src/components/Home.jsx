@@ -143,7 +143,7 @@ const Home = ({ onPodcastClick, selectedPodcast }) => {
           {sortedPodcasts.map((show) => (
             <li key={show.id} onClick={() => handlePodcastClick(show)}>
               <div className={`show-info ${show.id === selectedPodcast?.id ? 'selected' : ''}`}>
-                <img src={show.image} className="show-image" alt={show.title} />
+                <img src={show.image} className="show-image" alt={show.title} loading = "lazy" />
                 <div className="show-details">
                   <h3 className="show-title">{show.title}</h3>
                   <p className="show-description">{show.description}</p>
