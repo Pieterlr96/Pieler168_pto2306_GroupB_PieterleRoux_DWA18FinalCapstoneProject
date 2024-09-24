@@ -7,6 +7,7 @@ import Authentication from './components/form';
 import Favorite from './components/Favorite';
 import History from './components/History';
 import Fade from './components/Carosel';
+import ContextProvider, { UseContextValue } from "./components/UseContextValues";
 
 function App() {
   // State variables for managing the current page, selected podcast, and favorite episodes

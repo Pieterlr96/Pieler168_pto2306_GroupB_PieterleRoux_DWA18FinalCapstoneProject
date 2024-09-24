@@ -86,14 +86,6 @@ select {
   font-family: 'Ubuntu', sans-serif;
 }
 
-.genres-container {
-  position: relative;
-  top: -20px;
-  margin: auto;
-  width: 50%;
-  font-family: 'Ubuntu', sans-serif;
-}
-
 .history-container {
 
   margin-top: 0;

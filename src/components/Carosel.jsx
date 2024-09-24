@@ -18,7 +18,7 @@ function Fade({ shows }) {
   const handlePreviewClick = async (show) => {
     if (show.id) {
       try {
-        const response = await fetch(`https://podcast-api.netlify.app/id/${show.id}`);
+        const response = await fetch(`https://podcast-api.netlify.app/id/<ID>`);
         const data = await response.json();
   
         setPhaseState(prevState => ({

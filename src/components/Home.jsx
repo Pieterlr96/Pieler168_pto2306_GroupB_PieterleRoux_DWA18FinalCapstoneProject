@@ -107,10 +107,7 @@ const Home = ({ onPodcastClick, selectedPodcast }) => {
         <span className="Title">Yappers</span>
       </h1>
 
-      {/* Render the carousel with the podcast data */}
-      <ErrorBoundary>
-      {!loading && <Fade shows={showPodcast} />}
-     </ErrorBoundary>
+   
       <div className="search-sort-container">
         <input
           type="text"
@@ -124,9 +121,6 @@ const Home = ({ onPodcastClick, selectedPodcast }) => {
           <option value="ascDate">Sort Ascending by Date</option>
           <option value="descDate">Sort Descending by Date</option>
         </select>
-      </div>
-      <div className="genres-container">
-        <h2>Choose a Genre Related To Your Topic</h2>
         <select value={selectedGenre} onChange={handleGenreChange}>
           <option value="">Select a Genre</option>
           {genreData.map((genre) => (
@@ -136,6 +130,11 @@ const Home = ({ onPodcastClick, selectedPodcast }) => {
           ))}
         </select>
       </div>
+   {/* Render the carousel with the podcast data */}
+   <ErrorBoundary>
+      {!loading && <Fade shows={showPodcast} />}
+     </ErrorBoundary>
+
       {loading ? (
         <p>Loading please be patient...</p>
       ) : (
