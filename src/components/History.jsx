@@ -39,7 +39,7 @@ const History = () => {
           },
         ]);
       }
-    }, 10 * 60 * 1000);
+    }, 10 * 1000);
 
     return () => clearTimeout(timer);
   }, [lastListened]);
